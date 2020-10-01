@@ -1,5 +1,5 @@
 {
-  "name": "zheye",
+  "name": "sue-blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
     "vue": "^3.0.0-0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"

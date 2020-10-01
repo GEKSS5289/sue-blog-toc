@@ -1,0 +1,94 @@
+@import "mixin.scss";
+.text-s1 {
+    color: #333333;
+    font-weight: bold;
+  }
+  .text-s2 {
+    color: #333333;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .text-s3 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .text-s3:hover {
+    color: #ff6600;
+  }
+  .text-s4{
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .text-s4:hover{
+    color: #3683d6;
+  }
+  * {
+    padding: 0px;
+    margin: 0px;
+  }
+  .mr20 {
+    margin-right: 20px;
+  }
+  .mr30 {
+    margin-right: 30px;
+  }
+  .mr40 {
+    margin-right: 40px;
+  }
+  .mr50 {
+    margin-right: 50px;
+  }
+  .mr60 {
+    margin-right: 60px;
+  }
+  .mt20{
+    margin-top: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+
+.time-s{
+  background-color: #ff6600;
+  padding: 10px;
+}
+
+.blog-text-p{
+
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial;
+    line-height: 40px;
+
+}
+
+.hidden{
+  height: 0;
+  opacity: 0;
+  overflow:hidden;
+
+  //display: none;
+}
+
+.blog-server-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.container{
+  width: 1226px;
+  margin-left: auto;
+  margin-right: auto;
+}

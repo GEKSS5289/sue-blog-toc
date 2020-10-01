@@ -1,0 +1,12 @@
+@mixin marginTopAndBottom($top:50px,$bottom:50px){
+  margin-top: $top;
+  margin-bottom: $top;
+};
+
+@mixin shadow(){
+  box-shadow: 1px 1px 12px #888888;
+}
+
+@mixin shadowHover(){
+  box-shadow: 1px 7px 12px #888888;
+}
