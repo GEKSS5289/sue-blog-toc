@@ -9,7 +9,7 @@
     <div class="blog-server-content">
       <div class="blog-server-list">
         <menu-text></menu-text>
-        <service-text class="mt20" >s</service-text>
+        <service-text class="mt20" ></service-text>
       </div>
     </div>
 
