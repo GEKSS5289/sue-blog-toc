@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import SueNav from '@/components/nav/SueNav.vue'
-import SueFooter from '@/components/footer/SueFooter.vue'
+import SueNav from '@/components/sue-nav/SueNav.vue'
+import SueFooter from '@/components/sue-footer/SueFooter.vue'
 
 export default defineComponent({
   name: 'Home',

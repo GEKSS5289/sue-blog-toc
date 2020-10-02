@@ -9,8 +9,8 @@
 
 <script lang="ts">
   import { defineComponent, reactive } from 'vue'
-  import BlogTitle from "@/components/textarea/BlogTitle.vue";
-  import BlogMenuDetail from "@/components/textarea/BlogMenuDetail.vue";
+  import BlogTitle from "@/components/sue-textarea/BlogTitle.vue";
+  import BlogMenuDetail from "@/components/sue-textarea/BlogMenuDetail.vue";
   export default defineComponent({
     name: 'MenuText',
     components:{
