@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="text-s3">🏔️佚态</h1>
+    <h1 class="text-s3">佚态</h1>
     <div class="dynamic-list">
       <blog-text></blog-text>
       <blog-text></blog-text>
