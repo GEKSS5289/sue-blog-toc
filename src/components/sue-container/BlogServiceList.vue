@@ -1,9 +1,9 @@
 <template>
   <div class="blog-server-content">
     <div class="blog-server-list">
-      <git-hub-logo></git-hub-logo>
       <menu-text></menu-text>
       <service-text class="mt20" ></service-text>
+      <git-hub-logo></git-hub-logo>
     </div>
   </div>
 </template>

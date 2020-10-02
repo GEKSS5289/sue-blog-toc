@@ -19,13 +19,14 @@
 <style lang="scss" scoped>
   @import "../../assets/css/mixin.scss";
   .github-logo-box{
-    background-color: #FF0033;
+    /*background-color: #006699;*/
+    background-color:#607D8B;
     width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     @include shadow();
-    margin-bottom: 20px;
+    margin-top: 20px;
     transition: all 0.5s;
     &:hover{
       transform: scale(1.2);
