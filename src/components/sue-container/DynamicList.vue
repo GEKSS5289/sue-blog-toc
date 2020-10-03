@@ -29,6 +29,7 @@
 <style lang="scss" scoped>
 
   .dynamic-box{
+
     display: flex;
     justify-content: space-around;
     .dynamic-list {

@@ -32,6 +32,7 @@
     display: flex;
     justify-content: space-around;
     padding: 20px;
+
     @include marginTopAndBottom();
     //@include shadow();
   }
