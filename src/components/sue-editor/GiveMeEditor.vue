@@ -1,8 +1,10 @@
 <template>
-  <div class="editor-container" :class="{'hidden-editor':show}">
-    <textarea  maxlength="500"  :class="{'hidden-editor':show}" v-model="content" @keydown="test"></textarea>
+  <div class="editor-container" :class="{'hidden-editor':showEditor}">
+    <textarea placeholder="说说你的想法....." maxlength="500"  :class="{'hidden-editor':showEditor}" v-model="content" @keydown="test"></textarea>
     <div class="word-count"><span :class="{'full':full}">{{count}}</span>/500</div>
+    <div class="give-me-push" :class="{'hidden':showEditor}" @click="clickPush">📧PUSH</div>
   </div>
+
 </template>
 
 <script lang="ts">
@@ -10,12 +12,12 @@
 
   export default defineComponent({
     props:{
-      show:{
-        type:Boolean
+      showEditor:{
+        type:Boolean,
       }
     },
     name: 'GiveMeEditor',
-    setup(){
+    setup(prors,context){
       const content = ref('');
       const count = ref(0)
       const full = ref(false)
@@ -29,11 +31,14 @@
         }
         console.log(content)
       }
-
+      function clickPush() {
+        context.emit("clickPush")
+      }
       return{
         content,
-        test,
+        clickPush,
         count,
+        test,
         showTextarea,
         full
       }
@@ -72,4 +77,26 @@
     color:#E74C3C;
   }
 }
+
+  .give-me-push{
+    margin:30px auto;
+    width: 90px;
+    height: 10px;
+
+    text-align: center;
+    /*border: 5px solid #ff6600;*/
+    background-color:#5DADE2;
+    color: white;
+    line-height: 10px;
+    font-size: 20px;
+    padding: 15px;
+    font-family: Arial;
+    font-weight: bold;
+    border-radius: 20px;
+
+    transition: all 0.5s;
+    &:hover{
+      background-color:#3498DB;
+    }
+  }
 </style>

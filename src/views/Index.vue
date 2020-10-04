@@ -4,6 +4,7 @@
     <blog-service-list></blog-service-list>
   </div>
   <blog-give-me></blog-give-me>
+
 </template>
 
 <script lang="ts">
@@ -18,7 +19,8 @@
 
       DynamicList,
       BlogServiceList,
-      BlogGiveMe
+      BlogGiveMe,
+
     },
 
   })

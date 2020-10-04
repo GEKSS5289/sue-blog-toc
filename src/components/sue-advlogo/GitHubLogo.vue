@@ -3,7 +3,7 @@
       <h1 class="git-logo text-s3">
         <span class="git-char-g">G</span>
         <span class="git-words">ITHUB</span>
-        <span class="git-char-m">🚀</span>
+        <span class="git-char-m">🌎</span>
       </h1>
     </div>
 </template>
@@ -20,7 +20,7 @@
   @import "../../assets/css/mixin.scss";
   .github-logo-box{
     /*background-color: #006699;*/
-    background-color:#607D8B;
+    background-color:#5D6D7E;
     width: 400px;
     display: flex;
     flex-direction: column;

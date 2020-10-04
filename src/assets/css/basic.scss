@@ -74,7 +74,6 @@
   height: 0;
   opacity: 0;
   overflow:hidden;
-
   //display: none;
 }
 
@@ -82,9 +81,13 @@
   opacity: 0;
   width: 0;
   height: 0;
-
 }
-
+.hidden-hint{
+  opacity: 0;
+  //width: 0;
+  //height: 0;
+  transform: translateX(400px);
+}
 .blog-server-box {
   display: flex;
   flex-direction: column;
@@ -93,9 +96,14 @@
 }
 
 
+.active{
+  background-color: #ff6600 !important;
+}
 
 .container{
   width: 1226px;
   margin-left: auto;
   margin-right: auto;
 }
+
+
