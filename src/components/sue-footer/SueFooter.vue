@@ -35,7 +35,6 @@ export default defineComponent({
 </script>
 <style>
 .sue-footer-container {
-
   width: 100%;
   padding: 20px;
   margin: 0 auto;

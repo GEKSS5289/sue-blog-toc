@@ -40,10 +40,10 @@
     font-family: Arial;
     display: flex;
     position: absolute;
-    transition: all 0.5s;
+    right: 10px;
+    transition: all 1s;
     border-left: 5px solid #ff6600;
     /*background-color: #ff6600;*/
-    right: 20px;
     background-color:white;
     color: #7B7D7D;
     font-size: 20px;

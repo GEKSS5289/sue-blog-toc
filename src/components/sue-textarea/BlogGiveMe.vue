@@ -80,6 +80,7 @@
     align-items: center;
     text-align: center;
     height: 500px;
+
     margin-top: 300px !important;
     margin-bottom: 300px !important;
     .give-me{
