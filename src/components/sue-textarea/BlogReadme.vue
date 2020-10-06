@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="readme-logo">
-        <h1 class="readme-icon">🌔</h1>
+        <h1 class="readme-icon">🌀</h1>
         <h4 class="readme-title">"苏子云舟过，拨水千里渡"</h4>
       </div>
     </div>
@@ -21,7 +21,7 @@
   .container{
     //@include shadow();
     background-color: #F7F9F9;
-    height: 600px;
+    height: 300px;
     display: flex;
     flex-direction: row;
     align-items: center;
