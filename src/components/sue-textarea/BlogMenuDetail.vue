@@ -1,9 +1,13 @@
 <template>
   <div class="blog-menu-detail" :class="{'hidden':show}">
-    <h1>🍛</h1>
+    <h1>🍲</h1>
     <div class="reach-info">
-      <h2>完成了初步的前后分离</h2>
-      <h4>2020.5.20</h4>
+      <div>📃杂文</div>
+      <div>👩‍🚀踩艰</div>
+      <div >📜佚态集</div>
+      <div >🍚贡献</div>
+      <div>☕佚名言</div>
+      <div >👍行动</div>
     </div>
   </div >
 </template>
@@ -36,9 +40,34 @@
       font-size: 70px;
     }
     .reach-info{
-      padding: 50px;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
       text-align: center;
+      /*align-items:center;*/
+      font-size: 15px;
+      justify-content:space-between;
+      flex-wrap: wrap;
+
+      /*background-color: red;*/
+      div{
+        width: 80px;
+        font-weight: bold;
+        /*margin-left:10px;*/
+        margin-bottom: 10px;
+        padding: 10px;
+        /*background-color: red;*/
+        /*border-radius: 15px;*/
+        /*border: 1px solid #333333;*/
+        //@include shadowMenuItem()
+        transition: all 0.7s;
+        &:hover{
+          background-color: #ff6600;
+          color: white;
+        }
+      }
     }
+
   }
 
 </style>
