@@ -1,10 +1,8 @@
 <template>
   <div class="blog-auther-detail" :class="{'hidden':show}">
     <h1>自述</h1>
-    <p class="blog-text-p">擅长JAVA后端开发，
-      了解SpringCloud、SpringBoot、MVC、RabbitMQ、KafkaMQ、RocketMQ
-      ElasticSearch、Mysql、Redis、ELK、Docker、OSS、FastDFS、Nginx、Keepalived、Haproxy、MyCat
-      前端也有涉及如VUE.js、node.js
+    <p class="blog-text-p">
+      擅长采茶
     </p>
   </div >
 </template>
