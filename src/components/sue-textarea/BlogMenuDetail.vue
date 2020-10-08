@@ -2,12 +2,12 @@
   <div class="blog-menu-detail" :class="{'hidden':show}">
     <h1>🍲</h1>
     <div class="reach-info">
-      <div>📃杂文</div>
+      <router-link :to="'/article'" tag="div" >📃杂文</router-link>
       <div>👩‍🚀踩艰</div>
-      <div >📜佚态集</div>
-      <div >🍚贡献</div>
+      <div>📜佚态集</div>
+      <div>🍚贡献</div>
       <div>☕佚名言</div>
-      <div >👍行动</div>
+      <div>👍行动</div>
     </div>
   </div >
 </template>

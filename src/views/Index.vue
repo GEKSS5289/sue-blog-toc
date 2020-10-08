@@ -1,10 +1,9 @@
 <template>
-  <blog-article-list></blog-article-list>
+  <blog-read-me></blog-read-me>
   <div class="container">
     <dynamic-list></dynamic-list>
     <blog-service-list></blog-service-list>
   </div>
-
   <blog-give-me></blog-give-me>
 
 </template>
@@ -14,7 +13,7 @@
   import DynamicList from "@/components/sue-container/DynamicList.vue";
   import BlogServiceList from "@/components/sue-container/BlogServiceList.vue"
   import BlogGiveMe  from "@/components/sue-textarea/BlogGiveMe.vue"
-  import BlogArticleList from "@/components/sue-textarea/BlogReadme.vue";
+  import BlogReadMe from "@/components/sue-textarea/BlogReadme.vue";
   export default defineComponent({
     name: 'Index',
     components:{
@@ -22,7 +21,7 @@
       DynamicList,
       BlogServiceList,
       BlogGiveMe,
-      BlogArticleList
+      BlogReadMe
 
     },
 
