@@ -2,12 +2,13 @@
   <div class="blog-menu-detail" :class="{'hidden':show}">
     <h1>🍲</h1>
     <div class="reach-info">
-      <router-link :to="'/article'" tag="div" >📃杂文</router-link>
-      <div>👩‍🚀踩艰</div>
-      <div>📜佚态集</div>
-      <div>🍚贡献</div>
-      <div>☕佚名言</div>
-      <div>👍行动</div>
+      <router-link :to="'/article'" tag="a"  class="menu-item" >📃杂文</router-link>
+      <div class="menu-item" >👩‍🚀踩艰</div>
+      <div class="menu-item">📜佚态集</div>
+      <div class="menu-item">🍚贡献</div>
+      <div class="menu-item">☕佚名言</div>
+      <div class="menu-item">👍行动</div>
+      <div class="menu-item">📄日志</div>
     </div>
   </div >
 </template>
@@ -50,7 +51,9 @@
       flex-wrap: wrap;
 
       /*background-color: red;*/
-      div{
+
+      .menu-item{
+        text-decoration: none ;
         width: 80px;
         font-weight: bold;
         /*margin-left:10px;*/

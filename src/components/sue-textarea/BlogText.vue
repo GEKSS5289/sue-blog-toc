@@ -2,22 +2,41 @@
   <div class="dynamic-item">
     <div class="auther">
       <h1>Sue</h1>
-      <h4>2020.5.20 11:33</h4>
+      <h4>{{createdTime}}</h4>
     </div>
     <div class="dynamic-content">
-      <p>足落异乡逢秋雨，绵绵徐徐沾湿衣。恍惚背后妻娘唤，不知心离几重山</p>
+      <p>{{content}}</p>
     </div>
     <div class="mood">
-      <h1>😀</h1>
+      <h1>{{mood}}</h1>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { defineComponent ,onMounted} from 'vue'
 
   export default defineComponent({
-    name: 'BlogText'
+    props:{
+      createdTime:{
+        type:Date
+      },
+      content:{
+        type:String
+      },
+      mood:{
+        type:String
+      }
+    },
+    name: 'BlogText',
+    setup(props){
+
+      onMounted(()=>{
+        console.log("sfas")
+        console.log(props.content)
+      })
+
+    }
   })
 </script>
 

@@ -5,7 +5,7 @@
         <h1>上一篇</h1>
         <div class="article-op">
           <h1 class="article-title">关于vue3的配置</h1>
-          <h4 class="article-desc">描述了vue3中常见的配置信息，和配置功能，使得大家能够清除vue3给大家带来的新功能</h4>
+<!--          <h4 class="article-desc">描述了vue3中常见的配置信息，和配置功能，使得大家能够清除vue3给大家带来的新功能</h4>-->
           <div class="goto-button">去看看</div>
         </div>
       </div>
@@ -13,7 +13,7 @@
         <h1>下一篇</h1>
         <div class="article-op">
           <h1 class="article-title">关于vue3的配置</h1>
-          <h4 class="article-desc">描述了vue3中常见的配置信息，和配置功能，使得大家能够清除vue3给大家带来的新功能</h4>
+<!--          <h4 class="article-desc">描述了vue3中常见的配置信息，和配置功能，使得大家能够清除vue3给大家带来的新功能</h4>-->
           <div class="goto-button">去看看</div>
         </div>
       </div>
@@ -52,13 +52,13 @@
     }
     .article-op{
       padding: 30px;
-      background-color:#2C3E50 ;
-
+      background-color:#ff6600;
       @include shadow();
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 380px;
+      width: 200px;
+      /*height: 100px;*/
       .goto-button{
         padding: 10px;
         background-color: white;
@@ -66,7 +66,7 @@
         height: 20px;
         text-align: center;
         line-height: 20px;
-        margin-top: 10px;
+        margin-top: 0px;
         font-weight: bold;
         transition: all 0.6s;
         &:hover{
@@ -76,8 +76,7 @@
       }
       .article-title{
         color: white;
-        padding: 20px;
-        border-radius: 20px;
+        padding: 10px;
         overflow: hidden;
         text-align: center;
         font-size: 20px;

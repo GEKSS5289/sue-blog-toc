@@ -31,7 +31,7 @@
     background-color: #F7F9F9;
     padding: 50px;
     border-radius: 15px;
-    width: 600px;
+    width: 700px;
     h1{
       font-size: 60px;
     }
