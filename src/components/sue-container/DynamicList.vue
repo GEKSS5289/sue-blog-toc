@@ -18,7 +18,7 @@
 <script lang="ts">
   import { defineComponent,onBeforeMount,ref,onMounted,reactive} from 'vue'
   import axios from 'axios'
-  import BlogText from "@/components/sue-textarea/BlogText.vue"
+  import BlogText from "@/components/sue-index/BlogText.vue"
   import store from "@/store/index"
   // import Dynamic from "../../interface/Dynamic";
   export default defineComponent({

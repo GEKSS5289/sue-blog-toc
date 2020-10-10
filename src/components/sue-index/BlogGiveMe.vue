@@ -71,8 +71,8 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/css/mixin.scss";
-  @import "../../assets/css/basic.scss";
+  @import "../../assets/css/mixin";
+  @import "../../assets/css/basic";
   .container{
 
     display: flex;

@@ -9,8 +9,8 @@
 
 <script lang="ts">
   import { defineComponent, reactive } from 'vue'
-  import BlogTitle from "@/components/sue-textarea/BlogTitle.vue";
-  import BlogServiceDetail from "@/components/sue-textarea/BlogServiceDetail.vue";
+  import BlogTitle from "@/components/sue-index/BlogTitle.vue";
+  import BlogServiceDetail from "@/components/sue-index/BlogServiceDetail.vue";
 
   export default defineComponent({
     name: 'ServiceText',

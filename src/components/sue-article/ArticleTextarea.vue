@@ -23,15 +23,17 @@
 
 <style lang="scss" scoped>
 
-  @import "../../assets/css/mixin.scss";
-  @import "../../assets/css/basic.scss";
+  @import "../../assets/css/mixin";
+  @import "../../assets/css/basic";
   .article-container{
     margin-top: 50px !important;
     margin-bottom: 50px;
-    background-color: #F7F9F9;
+    background-color: #FBFCFC;
     padding: 50px;
     border-radius: 15px;
     width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     h1{
       font-size: 60px;
     }

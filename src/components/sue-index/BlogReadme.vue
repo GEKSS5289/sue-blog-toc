@@ -1,8 +1,8 @@
 <template>
     <div class="container">
       <div class="readme-logo">
-        <h1 class="readme-icon">🌀</h1>
-        <h4 class="readme-title">"苏子云舟过，拨水千里渡"</h4>
+        <h1 class="readme-icon">🥁</h1>
+        <h4 class="readme-title">HELLO SHUSHUN</h4>
       </div>
     </div>
 </template>
@@ -16,12 +16,12 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/css/mixin.scss";
-  @import "../../assets/css/basic.scss";
+  @import "../../assets/css/mixin";
+  @import "../../assets/css/basic";
   .container{
     //@include shadow();
     background-color: #F7F9F9;
-    height: 300px;
+    height: 500px;
     display: flex;
     flex-direction: row;
     align-items: center;

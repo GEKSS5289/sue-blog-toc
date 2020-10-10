@@ -12,8 +12,8 @@
   import {defineComponent} from 'vue'
   import DynamicList from "@/components/sue-container/DynamicList.vue";
   import BlogServiceList from "@/components/sue-container/BlogServiceList.vue"
-  import BlogGiveMe  from "@/components/sue-textarea/BlogGiveMe.vue"
-  import BlogReadMe from "@/components/sue-textarea/BlogReadme.vue";
+  import BlogGiveMe  from "@/components/sue-index/BlogGiveMe.vue"
+  import BlogReadMe from "@/components/sue-index/BlogReadme.vue";
   export default defineComponent({
     name: 'Index',
     components:{

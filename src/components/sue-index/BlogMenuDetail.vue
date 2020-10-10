@@ -20,7 +20,7 @@
     name: 'BlogMenuDetail',
     props:{
       show:{
-         type:Boolean
+        type:Boolean
       }
     }
 
@@ -29,8 +29,8 @@
 
 <style lang="scss" scoped>
 
-  @import "../../assets/css/mixin.scss";
-  @import "../../assets/css/basic.scss";
+  @import "../../assets/css/mixin";
+  @import "../../assets/css/basic";
   .blog-menu-detail{
     width: 350px;
     @include shadow();
@@ -42,13 +42,19 @@
     }
     .reach-info{
       padding: 10px;
+
       display: flex;
       flex-direction: row;
       text-align: center;
       /*align-items:center;*/
-      font-size: 15px;
+      font-size: 18px;
       justify-content:space-between;
       flex-wrap: wrap;
+
+      a {
+        text-decoration: none;
+        color: #333333;
+      }
 
       /*background-color: red;*/
 

@@ -27,8 +27,8 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/css/basic.scss";
-  @import "../../assets/css/mixin.scss";
+  @import "../../assets/css/basic";
+  @import "../../assets/css/mixin";
     .blog-server-title {
       /*margin-bottom: 20px;*/
       width: 400px;

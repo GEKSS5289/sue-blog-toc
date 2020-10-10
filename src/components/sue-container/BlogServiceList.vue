@@ -11,8 +11,8 @@
 <script lang="ts">
   import { defineComponent } from 'vue'
 
-  import MenuText from '@/components/sue-textarea/MenuText.vue'
-  import ServiceText from '@/components/sue-textarea/ServiceText.vue'
+  import MenuText from '@/components/sue-index/MenuText.vue'
+  import ServiceText from '@/components/sue-index/ServiceText.vue'
   import GitHubLogo from "@/components/sue-advlogo/GitHubLogo.vue";
 
   export default defineComponent({
