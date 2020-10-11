@@ -8,8 +8,6 @@
           </blog-text>
         </div>
 
-
-
     </div>
   </div>
 

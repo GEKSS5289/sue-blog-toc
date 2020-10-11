@@ -1,4 +1,5 @@
 @import "mixin.scss";
+
 .text-s1 {
   color: #333333;
   font-weight: bold;
@@ -112,6 +113,7 @@ a {
 }
 
 
+
 .active{
   background-color: #ff6600 !important;
 }
@@ -122,4 +124,26 @@ a {
   margin-right: auto;
 }
 
+.blog-readme-begin{
+  @include showbegin();
+}
 
+.blog-readme-end{
+  @include showEnd();
+}
+
+.blog-dynamic-begin{
+  @include showbegin();
+}
+
+.blog-dynamic-end{
+  @include showEnd();
+}
+
+.blog-service-begin{
+  @include showbegin();
+}
+
+.blog-service-end{
+  @include showEnd();
+}

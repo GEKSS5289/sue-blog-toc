@@ -22,9 +22,6 @@
   @import "../../assets/css/basic.scss";
 .article-comment-container{
   padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-
   width: 700px;
   h1{
     text-align: center;

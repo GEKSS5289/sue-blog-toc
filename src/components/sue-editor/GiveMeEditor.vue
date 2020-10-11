@@ -1,7 +1,7 @@
 <template>
   <div class="editor-container" :class="{'hidden-editor':showEditor}">
-    <textarea placeholder="说说你的想法....." maxlength="500"  :class="{'hidden-editor':showEditor}" v-model="content" @keydown="test"></textarea>
-    <div class="word-count"><span :class="{'full':full}">{{count}}</span>/500</div>
+    <textarea placeholder="说说你的想法.....(320字符)" maxlength="320"  :class="{'hidden-editor':showEditor}" v-model="content" @keydown="test"></textarea>
+    <div class="word-count"><span :class="{'full':full}">{{count}}</span>/320</div>
     <div class="give-me-push" :class="{'hidden':showEditor}" @click="clickPush">📧PUSH</div>
   </div>
 
@@ -24,7 +24,7 @@
       const showTextarea = ref(false);
       function test() {
         count.value = content.value.length
-        if(count.value == 500){
+        if(count.value == 320){
           full.value = true
         }else{
           full.value = false
@@ -48,9 +48,10 @@
 
 <style lang="scss" scoped>
   @import "../../assets/css/basic.scss";
+  @import "../../assets/css/mixin.scss";
 .editor-container{
   width: 700px;
-  height: 400px;
+  height: 300px;
   transition: all 1s;
   background-color:#F8F9F9;
   border-radius: 25px;
@@ -60,16 +61,13 @@
   textarea{
     font-size: 24px;
     width: 630px;
-    height: 300px;
+    height: 200px;
     /*padding: 50px;*/
     color: #7B7D7D;
     font-weight: bold;
     font-family: Arial;
     background: none;
-    border: none;
-    overflow-x:hidden;
-    overflow-y:hidden;
-    resize: none;
+    @include textareaDef();
     margin-bottom: 20px;
   }
   .full{
