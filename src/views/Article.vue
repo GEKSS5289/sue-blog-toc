@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent,onMounted} from 'vue'
 import ArticleTextarea from '@/components/sue-article/ArticleTextarea.vue'
 import ArticleRight from '@/components/sue-article/ArticleRight'
 import ArticleComment from '@/components/sue-article/ArticleComment'
@@ -20,6 +20,11 @@ export default defineComponent({
       ArticleRight,
       ArticleComment,
       ArticleUserSay
+    },
+    setup(){
+      onMounted(()=>{
+       window.scrollTo(0,0);
+      })
     }
 })
 

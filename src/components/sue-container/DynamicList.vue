@@ -2,9 +2,11 @@
   <div class="dynamic-box">
     <h1 class="text-s3">佚态</h1>
     <div class="dynamic-list">
-        <div v-for="(item,index) in dynamiclists.data"
-        >
-          <blog-text :content="item.content" :mood="item.mood" :createdTime="item.createdTime">
+        <div v-for="(item,index) in dynamiclists.data">
+          <blog-text
+            :content="item.content"
+            :mood="item.mood"
+            :createdTime="item.createdTime">
           </blog-text>
         </div>
 
@@ -17,10 +19,10 @@
   import { defineComponent,onBeforeMount,ref,onMounted,reactive} from 'vue'
   import axios from 'axios'
   import BlogText from "@/components/sue-index/BlogText.vue"
-  import store from "@/store/index"
-  // import Dynamic from "../../interface/Dynamic";
-  export default defineComponent({
+  import Dynamic from "@/interface/Dynamic";
+  import {blogDynamicApi} from "@/common/apirouter";
 
+  export default defineComponent({
     name: 'DynamicList',
     components:{
       BlogText
@@ -28,14 +30,6 @@
     setup() {
 
 
-      interface Dynamic {
-        content: string,
-        createdTime: Date,
-        mood: string
-      }
-      // let dynamiclists = reactive({
-      //   data: Array<Dynamic>()
-      // })
       let dynamiclists = reactive({
         data: Array<Dynamic>()
       })
@@ -44,7 +38,7 @@
       })
 
       function getIndexDynamic() {
-        axios.get("http://localhost:5288/blog/dynamic").then(res => {
+        axios.get(blogDynamicApi).then(res => {
           for (let i = 0; i < res.data.data.length; i++) {
             dynamiclists.data.push(res.data.data[i])
             // console.log(dynamiclists.length)

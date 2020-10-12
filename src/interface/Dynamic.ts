@@ -5,4 +5,5 @@ interface Dynamic{
   createdTime:Date,
   mood:string
 }
-export default Dynamic
+
+export default Dynamic;

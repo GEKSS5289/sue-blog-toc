@@ -26,7 +26,7 @@
     width: 700px;
     /*height: 150px;*/
     padding: 50px;
-    background-color:#EBF5FB;
+    background-color:#F0F3F4;
     /*margin-left: auto;*/
     /*margin-right: auto;*/
     border-left: 5px solid #626567;
@@ -49,6 +49,7 @@
       }
     }
     textarea{
+
       padding: 10px;
       box-sizing: border-box;
       height: 300px;
