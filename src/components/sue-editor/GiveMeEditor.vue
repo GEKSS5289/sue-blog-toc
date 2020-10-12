@@ -2,7 +2,7 @@
   <div class="editor-container" :class="{'hidden-editor':showEditor}">
     <textarea placeholder="说说你的想法.....(320字符)" maxlength="320"  :class="{'hidden-editor':showEditor}" v-model="content" @keydown="test"></textarea>
     <div class="word-count"><span :class="{'full':full}">{{count}}</span>/320</div>
-    <div class="give-me-push" :class="{'hidden':showEditor}" @click="clickPush">📧PUSH</div>
+    <div class="give-me-push" :class="{'hidden':showEditor}" @click="clickPush">📧</div>
   </div>
 
 </template>
@@ -78,12 +78,12 @@
 
   .give-me-push{
     margin:30px auto;
-    width: 90px;
+    width: 50px;
     height: 10px;
 
     text-align: center;
     /*border: 5px solid #ff6600;*/
-    background-color:#5DADE2;
+    /*background-color:#5DADE2;*/
     color: white;
     line-height: 10px;
     font-size: 20px;
@@ -91,10 +91,11 @@
     font-family: Arial;
     font-weight: bold;
     border-radius: 20px;
-
+    cursor: pointer;
     transition: all 0.5s;
     &:hover{
-      background-color:#3498DB;
+      /*background-color:#3498DB;*/
+      @include shadow();
     }
   }
 </style>

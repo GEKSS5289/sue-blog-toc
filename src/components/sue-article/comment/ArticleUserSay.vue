@@ -55,6 +55,7 @@
       height: 300px;
       font-size: 24px;
       background:none;
+      color: #333333;
       width: 700px;
       margin-top: 20px;
       @include textareaDef();

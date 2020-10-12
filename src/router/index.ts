@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
 import Index from '../views/Index.vue'
 import Article from '../views/Article.vue'
+import ArticleCategory from "@/views/ArticleCategory.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -16,6 +17,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/article',
         component: Article,
+      },
+      {
+        path: '/category',
+        component:ArticleCategory
       }
     ],
   },

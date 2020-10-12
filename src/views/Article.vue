@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ArticleTextarea></ArticleTextarea>
+      <ArticleTextarea></ArticleTextarea>
 <!--    <article-right></article-right>-->
     <article-user-say></article-user-say>
     <article-comment></article-comment>
