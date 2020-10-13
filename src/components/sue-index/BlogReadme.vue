@@ -1,8 +1,8 @@
 <template>
     <div class="container">
       <div class="readme-logo">
-        <h1 class="readme-icon">🥁</h1>
-        <h4 class="readme-title">HELLO SHUSHUN</h4>
+        <h1 class="readme-icon">"Oh Hi"</h1>
+<!--        <h4 class="readme-title"></h4>-->
       </div>
     </div>
 </template>
@@ -20,10 +20,11 @@
   @import "../../assets/css/basic";
   .container{
     //@include shadow();
-    background-color: #F7F9F9;
+    /*background-color: #F7F9F9;*/
     height: 500px;
     display: flex;
     flex-direction: row;
+    /*background: url('/public/imgs/df.png');*/
     align-items: center;
     .readme-logo{
       display: flex;
