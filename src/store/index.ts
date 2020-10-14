@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import Dynamic from "@/interface/Dynamic";
+import Dynamic from "@/model/Dynamic";
 
 
 export default createStore({

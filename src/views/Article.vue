@@ -23,10 +23,9 @@ export default defineComponent({
       ArticleUserSay
     },
     setup(){
-      onMounted(()=>{
        window.scrollTo(0,0);
 
-      })
+
     }
 })
 

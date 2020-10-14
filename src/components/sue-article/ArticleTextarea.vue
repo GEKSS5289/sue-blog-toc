@@ -34,7 +34,7 @@
   .article-container{
     margin-top: 50px !important;
     /*margin-bottom: 50px;*/
-    background-color: #FBFCFC;
+    /*background-color: #FBFCFC;*/
     padding: 50px;
     border-radius: 15px;
     width: 700px;

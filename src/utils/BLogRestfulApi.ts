@@ -1,19 +1,24 @@
-import Dynamic from "../interface/Dynamic";
+import Dynamic from "../model/Dynamic";
 import axios from "axios";
 import {blogIndexApi} from "@/common/apirouter";
+import {reactive} from "vue";
 
+/**
+ * 请求后端主页Api
+ */
 class BLogRestfulApi{
 
-    BlogDynamicList:Array<Dynamic> = new Array<Dynamic>();
+    dynamiclists = reactive({
+      data: Array<Dynamic>()
+    })
 
-    getBlogDynamicList():Array<Dynamic>{
+    getBlogDynamicList(){
         axios.get(blogIndexApi.dynamicApi).then(res => {
-          console.log(res)
             for (let i = 0; i < res.data.data.length; i++) {
-                this.BlogDynamicList.push(res.data.data[i])
+                this.dynamiclists.data.push(res.data.data[i])
             }
         })
-        return this.BlogDynamicList
+        return this.dynamiclists
     }
 }
 

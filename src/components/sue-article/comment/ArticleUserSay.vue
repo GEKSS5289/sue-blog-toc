@@ -24,16 +24,19 @@
     flex-direction: column;
 
     width: 700px;
+    height: 200px;
     /*height: 150px;*/
-    padding: 50px;
-    background-color:#F0F3F4;
+    padding: 20px;
+    /*background-color:#F0F3F4;*/
     /*margin-left: auto;*/
     /*margin-right: auto;*/
-    border-left: 5px solid #626567;
+    /*border-left: 5px solid #626567;*/
     margin-bottom: 20px;
+    @include shadow();
+    /*border: 1px solid #333333;*/
     transition: all 0.6s;
     &:hover{
-      @include shadow();
+      @include shadowHover();
     }
 
     .user-say-options{
@@ -58,6 +61,7 @@
       color: #333333;
       width: 700px;
       margin-top: 20px;
+      overflow: auto;
       @include textareaDef();
       overflow-y:scroll;
     }

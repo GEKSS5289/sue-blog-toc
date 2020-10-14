@@ -18,7 +18,7 @@
 <script lang="ts">
   import { defineComponent,onMounted,reactive} from 'vue'
   import BlogText from "@/components/sue-index/BlogText.vue"
-  import Dynamic from "@/interface/Dynamic";
+  import Dynamic from "@/model/Dynamic";
   import BLogRestfulApi from "@/utils/BLogRestfulApi";
 
   export default defineComponent({
@@ -27,21 +27,8 @@
       BlogText
     },
     setup() {
-
-      let dynamiclists = reactive({
-        data: Array<Dynamic>()
-      })
-
-      onMounted(() => {
-        dynamiclists.data = getIndexDynamic()
-      })
-
-      function getIndexDynamic() {
-          return new BLogRestfulApi().getBlogDynamicList()
-      }
-
       return {
-        dynamiclists
+        dynamiclists:new BLogRestfulApi().getBlogDynamicList()
       }
     }
 
