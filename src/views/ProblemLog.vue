@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="problemlog-list container">
-
+    <input placeholder="能否也帮帮你....." type="text">
     <div class="problemlog-item">
       <h1 class="log-title">关于数据连接失效</h1>
       <h2 class="log-datetime">2020.5.5</h2>
@@ -64,6 +64,27 @@
       font-size: 60px;
       font-weight: bold;
     }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    input{
+      width: 1169px;
+      height: 20px;
+      margin-bottom: 50px;
+      outline: none;
+
+      border: none;
+      @include shadow();
+      padding: 30px;
+      font-size: 30px;
+      transition: all 1s;
+      &:hover{
+        @include shadowHover();
+      }
+    }
+
+
     .problemlog-item{
 
       /*background-color: red;*/
