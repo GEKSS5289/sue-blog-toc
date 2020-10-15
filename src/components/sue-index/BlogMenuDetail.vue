@@ -3,7 +3,7 @@
     <h1>🍲</h1>
     <div class="reach-info">
       <router-link :to="'/category'" tag="a"  class="menu-item" >📃杂文</router-link>
-      <div class="menu-item" >👩‍🚀踩艰</div>
+      <router-link :to="'/problemlog'" tag="a" class="menu-item" >👩‍🚀踩艰</router-link>
       <div class="menu-item">📜佚态集</div>
       <div class="menu-item">🍚贡献</div>
       <div class="menu-item">☕佚名言</div>

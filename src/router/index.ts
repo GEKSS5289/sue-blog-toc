@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Index from '../views/Index.vue'
 import Article from '../views/Article.vue'
 import ArticleCategory from "@/views/ArticleCategory.vue";
+import ProblemLog from "@/views/ProblemLog.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -21,6 +22,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/category',
         component:ArticleCategory
+      },
+      {
+        path: '/problemlog',
+        component:()=>import('@/views/ProblemLog.vue')
       }
     ],
   },

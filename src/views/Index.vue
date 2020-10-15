@@ -9,11 +9,12 @@
 </template>
 
 <script lang="ts">
-  import {defineComponent,ref,onMounted,onBeforeMount} from 'vue'
+  import {defineComponent} from 'vue'
   import DynamicList from "@/components/sue-container/DynamicList.vue";
   import BlogServiceList from "@/components/sue-container/BlogServiceList.vue"
   import BlogGiveMe  from "@/components/sue-index/BlogGiveMe.vue"
   import BlogReadMe from "@/components/sue-index/BlogReadme.vue";
+  import {BlogInit} from "@/utils/BLogInit";
   export default defineComponent({
     name: 'Index',
     components:{
@@ -25,34 +26,10 @@
 
     },
     setup(){
-      const begin = ref('blog-readme-begin')
-      const end = ref('blog-readme-end')
-      const readmeStatus = ref(true)
-      const dynamicStatus = ref(true)
-      const serviceStatus = ref(true)
-
-      onMounted(()=>{
-        setTimeout(()=>{
-          readmeStatus.value = !readmeStatus.value
-        },200)
-
-        setTimeout(()=>{
-          dynamicStatus.value = !dynamicStatus.value
-          serviceStatus.value = !serviceStatus.value
-        },700)
-
-
-
-        // clearTimeout(time)
-      })
 
 
       return{
-        begin,
-        end,
-        readmeStatus,
-        dynamicStatus,
-        serviceStatus
+        ...BlogInit(),
       }
     }
 

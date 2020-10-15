@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="readme-logo">
-        <h1 class="readme-icon">"Oh Hi"</h1>
+        <h1 class="readme-icon">"山不在高，有我则林"</h1>
 <!--        <h4 class="readme-title"></h4>-->
       </div>
     </div>
