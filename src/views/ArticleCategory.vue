@@ -55,16 +55,47 @@
           <!--          <div class="search-btn">🔎</div>-->
         </div>
         <div class="article-list">
+
+
           <router-link class="none-style" to="/article" tag="a" >
             <div class="article-item">
-              <div class="article-icon">📃</div>
-              <div class="article-info-title">JAV范德萨范德萨发撒的封建士大夫精神答案A实战</div>
-              <div class="article-category">JAVA</div>
-              <div class="article-comment-count">佚言:5</div>
-              <div class="article-read-count">随眼:5</div>
-              <div class="article-create-time">2020.6.7</div>
+<!--              <div class="article-icon">📃</div>-->
+              <div class="article-content">
+                <div class="article-info-title">JAV范德萨范德萨发撒的封建士大夫精神答案A实战</div>
+                <div class="article-category">JAVA</div>
+                <div class="article-comment-count">佚言:5</div>
+                <div class="article-read-count">随眼:5</div>
+                <div class="article-create-time">2020.6.7</div>
+              </div>
             </div>
           </router-link>
+
+          <router-link class="none-style" to="/article" tag="a" >
+            <div class="article-item">
+              <!--              <div class="article-icon">📃</div>-->
+              <div class="article-content">
+                <div class="article-info-title">JAV范德萨范德萨发撒的封建士大夫精神答案A实战</div>
+                <div class="article-category">JAVA</div>
+                <div class="article-comment-count">佚言:5</div>
+                <div class="article-read-count">随眼:5</div>
+                <div class="article-create-time">2020.6.7</div>
+              </div>
+            </div>
+          </router-link>
+
+          <router-link class="none-style" to="/article" tag="a" >
+            <div class="article-item">
+              <!--              <div class="article-icon">📃</div>-->
+              <div class="article-content">
+                <div class="article-info-title">JAV范德萨范德萨发撒的封建士大夫精神答案A实战</div>
+                <div class="article-category">JAVA</div>
+                <div class="article-comment-count">佚言:5</div>
+                <div class="article-read-count">随眼:5</div>
+                <div class="article-create-time">2020.6.7</div>
+              </div>
+            </div>
+          </router-link>
+
         </div>
       </div>
     </div>
@@ -159,32 +190,26 @@
       .article-search{
         /*width: 300px;*/
         /*height: 70px;*/
-
+        width: 861px;
         display: flex;
         flex-direction: row;
         /*justify-content: space-between;*/
         background-color: white;
         align-items: center;
+        margin-left: 50px;
+        border-left:5px solid #273746;
         /*border-top: 3px solid #ff6600;*/
+        transition: all 1s;
+        &:hover{
+          @include shadowHover();
+        }
         input{
-          width: 70%;
+          width: 600px;
           height: 20px;
           font-size: 34px;
           padding: 30px;
           outline: none;
           border: none;
-        }
-        .search-btn{
-          font-size: 34px;
-          margin-left: 40px;
-          /*padding: 30px;*/
-          color: #333333;
-          font-weight: bold;
-          cursor: pointer;
-          transition: all 0.5s;
-          &:hover{
-            color: #3683d6;
-          }
         }
       }
       .article-list{
@@ -194,19 +219,26 @@
             text-decoration: none;
             color: #5D6D7E;
           }
-
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         /*overflow-scrolling: auto;*/
         padding: 20px;
         /*height: 500px;*/
         .article-item{
+          width: 378px;
+          height: 200px;
+          margin-left: 30px;
           font-weight: bold;
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: flex-start;
           align-items: center;
           transition: all 1s;
+          margin-bottom: 40px;
           /*border-bottom: 1px solid #333333;*/
-          //@include shadow();
+          /*box-sizing: border-box;*/
+          @include shadow();
           padding: 20px;
           .article-icon{
             font-size: 30px;
@@ -220,6 +252,19 @@
           }
           &:hover{
             @include shadowHover();
+          }
+          .article-content{
+            margin-left: 30px;
+
+            .article-category{
+
+              margin-top: 10px;
+              color: white;
+              background-color: #273746;
+              width: 30px;
+              padding: 10px;
+              margin-bottom: 10px;
+            }
           }
         }
       }

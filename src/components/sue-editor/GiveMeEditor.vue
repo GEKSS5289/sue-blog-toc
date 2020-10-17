@@ -1,6 +1,12 @@
 <template>
   <div class="editor-container" :class="{'hidden-editor':showEditor}">
-    <textarea placeholder="说说你的想法.....(320字符)" maxlength="320"  :class="{'hidden-editor':showEditor}" v-model="content" @keydown="test"></textarea>
+    <textarea
+      placeholder="说说你的想法.....(320字符)"
+      maxlength="320"
+      :class="{'hidden-editor':showEditor}"
+      v-model="content"
+      @keydown="test"
+    ></textarea>
     <div class="word-count"><span :class="{'full':full}">{{count}}</span>/320</div>
     <div class="give-me-push" :class="{'hidden':showEditor}" @click="clickPush">📧</div>
   </div>

@@ -21,7 +21,7 @@
   .container{
     //@include shadow();
     /*background-color: #F7F9F9;*/
-    height: 500px;
+    height: 300px;
     display: flex;
     flex-direction: row;
     /*background: url('/public/imgs/df.png');*/

@@ -26,6 +26,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/problemlog',
         component:()=>import('@/views/ProblemLog.vue')
+      },
+      {
+        path:'/filestorage',
+        component:()=>import('@/views/FileStorage.vue')
       }
     ],
   },

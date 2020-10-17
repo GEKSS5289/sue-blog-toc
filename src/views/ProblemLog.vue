@@ -47,7 +47,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 300px;
     .problemlog-info{
 
       h1{
@@ -106,6 +106,9 @@
         font-size: 20px;
         /*padding: 50px;*/
         /*background-color: #ff6600;*/
+      }
+      .log-content{
+        line-height: 35px;
       }
       .log-solution{
         font-weight: bold;
