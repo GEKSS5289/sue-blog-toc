@@ -5,9 +5,9 @@
       <router-link :to="'/category'" tag="a"  class="menu-item" >📃杂文</router-link>
       <router-link :to="'/problemlog'" tag="a" class="menu-item" >👩‍🚀踩艰</router-link>
       <router-link :to="'/filestorage'" tag="a" class="menu-item" >🍚贡献</router-link>
-      <div class="menu-item">📜佚态集</div>
+      <router-link :to="'/logs'" tag="a" class="menu-item">📄日志</router-link>
       <div class="menu-item">☕佚名言</div>
-      <div class="menu-item">📄日志</div>
+      <div class="menu-item">📜佚态集</div>
     </div>
   </div >
 </template>
