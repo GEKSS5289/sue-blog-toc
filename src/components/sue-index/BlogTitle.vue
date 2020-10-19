@@ -27,15 +27,18 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/css/basic";
+  @import "../../assets/css/theme";
   @import "../../assets/css/mixin";
+  @import "../../assets/css/basic";
     .blog-server-title {
       /*margin-bottom: 20px;*/
-      width: 400px;
+      /*width: 400px;*/
       cursor: pointer;
 
       .blog-title {
-        background-color: #ff6600;
+        width: 400px;
+        height: 100px;
+        background-color: $sue-theme-color;
         color: white;
         h1 {
           color: white;
@@ -46,7 +49,7 @@
 
         transition: all 0.3s;
         padding: 20px;
-        @include shadow();
+        //@include shadow();
 
         .blog-title-info {
           /*padding: 20px;*/

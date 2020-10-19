@@ -18,9 +18,11 @@
 
 <style lang="scss" scoped>
   @import "../../assets/css/mixin.scss";
+  @import "../../assets/css/theme";
   .github-logo-box{
     /*background-color: #006699;*/
-    background-color:#5D6D7E;
+    background:none;
+
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -30,9 +32,14 @@
     transition: all 0.5s;
     &:hover{
       transform: scale(1.2);
+      background-color: $sue-theme-color;
+      .git-logo{
+        color: white !important;
+      }
+
     }
     .git-logo{
-      color: white;
+      color: $sue-theme-color !important;
       padding: 30px;
       box-sizing: border-box;
       .git-char-m{

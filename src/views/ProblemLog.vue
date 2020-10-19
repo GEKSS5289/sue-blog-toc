@@ -1,11 +1,11 @@
 <template>
-  <div class="container problemlog-container">
+  <div class="container problemlog-container" :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}" >
     <div class="problemlog-info">
       <h1>谁还没个摔跤擦伤</h1>
       <h3>be injured </h3>
     </div>
   </div>
-  <div class="problemlog-list container">
+  <div class="problemlog-list container" >
     <input placeholder="能否也帮帮你....." type="text">
     <div class="problemlog-item">
       <h1 class="log-title">关于数据连接失效</h1>
@@ -33,21 +33,31 @@
 </template>
 
 <script lang="ts">
-    import {defineComponent} from 'vue'
+  import {defineComponent} from 'vue'
+  import {BlogInit} from "@/utils/BLogInit";
 
-    export default defineComponent({
-        name: "ProblemLog"
-    })
+  export default defineComponent({
+    name: "ProblemLog",
+    setup(){
+      window.scrollTo(0,0);
+      return{
+        ...BlogInit(),
+      }
+    }
+  })
 </script>
 
 <style lang="scss" scoped>
   @import "../assets/css/mixin";
+  @import "../assets/css/theme";
   .problemlog-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    padding: 30px;
+    height: 400px;
+
     .problemlog-info{
 
       h1{
@@ -89,7 +99,7 @@
 
       /*background-color: red;*/
       /*padding: 100px;*/
-      border-left: 5px solid #ff6600;
+      border-left: 5px solid $sue-theme-color;
       padding: 50px;
       margin-bottom: 50px;
       h1{

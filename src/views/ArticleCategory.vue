@@ -1,14 +1,13 @@
 <template>
 
-  <div>
-    <div class="category-banner container">
-      <div class="category-text-area">
+  <div >
+    <div class="category-banner container" :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}">
+      <div class="category-text-area" >
         <h1>📄</h1>
         <h4>随手记录，随风而动</h4>
       </div>
     </div>
-    <div class="container article-category-container">
-
+    <div class="container article-category-container" :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}" >
       <div class="category-list">
         <div class="category-item">
           <h1>🥘</h1>
@@ -49,7 +48,7 @@
       </div>
 
 
-      <div class="article-area">
+      <div class="article-area" :class="{'blog-service-begin':serviceStatus,'blog-service-end':!serviceStatus}">
         <div class="article-search">
           <input  placeholder="搜搜看....." class="article-search-input"/>
           <!--          <div class="search-btn">🔎</div>-->
@@ -57,7 +56,7 @@
         <div class="article-list">
 
 
-          <router-link class="none-style" to="/article" tag="a" >
+          <router-link class="none-style" :to="'/article'" tag="a" >
             <div class="article-item">
 <!--              <div class="article-icon">📃</div>-->
               <div class="article-content">
@@ -105,11 +104,16 @@
 
 <script lang="ts">
     import {defineComponent} from 'vue'
+    import {BlogInit} from "@/utils/BLogInit";
 
     export default defineComponent({
         name: "ArticleCategory",
         setup(){
           window.scrollTo(0,0);
+
+          return{
+            ...BlogInit(),
+          }
         }
     })
 </script>
@@ -235,7 +239,7 @@
           justify-content: flex-start;
           align-items: center;
           transition: all 1s;
-          margin-bottom: 40px;
+          margin-bottom: 20px;
           /*border-bottom: 1px solid #333333;*/
           /*box-sizing: border-box;*/
           @include shadow();

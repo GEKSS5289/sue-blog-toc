@@ -12,13 +12,13 @@ class BLogRestfulApi{
       data: Array<Dynamic>()
     })
 
-    getBlogDynamicList(){
+    getBlogDynamicList():Array<Dynamic>{
         axios.get(blogIndexApi.dynamicApi).then(res => {
             for (let i = 0; i < res.data.data.length; i++) {
                 this.dynamiclists.data.push(res.data.data[i])
             }
         })
-        return this.dynamiclists
+        return this.dynamiclists.data
     }
 }
 

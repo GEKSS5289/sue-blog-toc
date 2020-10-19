@@ -1,5 +1,5 @@
 <template>
-    <div class="article-container">
+    <div class="article-container " :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}">
       <h1 class="article-title">测试文章</h1>
       <h4 class="article-time">2020</h4>
       <div class="article-content">
@@ -21,9 +21,15 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
+  import {BlogInit} from "@/utils/BLogInit";
 
   export default defineComponent({
-    name: 'ArticleTextarea'
+    name: 'ArticleTextarea',
+    setup(){
+      return{
+        ...BlogInit(),
+      }
+    }
   })
 </script>
 

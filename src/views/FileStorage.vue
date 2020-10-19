@@ -1,16 +1,16 @@
 <template>
 
-  <div class="file-container">
+  <div class="file-container " :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}">
     <h1>🥂</h1>
     <h3>CAN I HELP YOU</h3>
     <div class="file-search">
       <input type="text" placeholder="你需要的我可能有.....">
     </div>
 
-    <div class="file-list">
+    <div class="file-list" >
       <div class="file-itme">
         <div class="file-icon">
-          <img src="../../public/imgs/database.png" alt=""/>
+          <img src="../../public/imgs/icon/database.png" alt=""/>
         </div>
         <div class="file-name">mysql.0</div>
         <div class="file-size">37.6KB</div>
@@ -19,7 +19,7 @@
       </div>
       <div class="file-itme">
         <div class="file-icon">
-          <img src="../../public/imgs/database.png" alt=""/>
+          <img src="../../public/imgs/icon/database.png" alt=""/>
         </div>
         <div class="file-name">mysql.0</div>
         <div class="file-size">37.6KB</div>
@@ -28,7 +28,7 @@
       </div>
       <div class="file-itme">
         <div class="file-icon">
-          <img src="../../public/imgs/database.png" alt=""/>
+          <img src="../../public/imgs/icon/database.png" alt=""/>
         </div>
         <div class="file-name">mysql.0</div>
         <div class="file-size">37.6KB</div>
@@ -45,9 +45,17 @@
 
 <script lang="ts">
   import {defineComponent} from 'vue'
+  import {BlogInit} from "@/utils/BLogInit";
 
   export default defineComponent({
-    name: "FileStorage"
+    name: "FileStorage",
+    setup(){
+
+      window.scrollTo(0,0);
+      return{
+        ...BlogInit(),
+      }
+    }
   })
 </script>
 

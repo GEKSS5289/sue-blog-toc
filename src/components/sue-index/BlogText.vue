@@ -42,17 +42,22 @@
 
 <style lang="scss" scoped>
 
+  @import "../../assets/css/theme";
   @import "../../assets/css/mixin";
-
+  @import "../../assets/css/basic";
   .dynamic-item {
     position: relative;
+    background-color: white;
     &:hover {
       box-shadow: 1px 7px 12px #888888;
+      background-color: $sue-theme-color;
+      color: white;
       .auther {
-        color: #ff6600;
+        color:white;
+        border-right: 3px solid white;
       }
     }
-    transition: all 0.3s;
+    transition: all 0.7s;
     margin-bottom: 20px;
     /*width: 600px;*/
     padding: 30px;
@@ -63,7 +68,7 @@
     .auther {
       transition: all 0.3s;
       padding: 20px;
-      border-right: 3px solid #ff6600;
+      border-right: 3px solid $sue-theme-color;
       margin-right: 20px;
     }
     .mood {

@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container"  >
     <ArticleTextarea></ArticleTextarea>
 <!--    <article-right></article-right>-->
-    <article-user-say></article-user-say>
+    <article-user-say :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}"></article-user-say>
     <article-comment></article-comment>
   </div>
 </template>
@@ -13,6 +13,7 @@ import ArticleTextarea from '@/components/sue-article/ArticleTextarea.vue'
 import ArticleRight from '@/components/sue-article/ArticleRight'
 import ArticleComment from '@/components/sue-article/ArticleComment'
 import ArticleUserSay from '@/components/sue-article/comment/ArticleUserSay'
+import { BlogInit } from '@/utils/BLogInit'
 
 export default defineComponent({
     name:"Article",
@@ -25,7 +26,9 @@ export default defineComponent({
     setup(){
        window.scrollTo(0,0);
 
-
+      return{
+        ...BlogInit(),
+      }
     }
 })
 
@@ -36,5 +39,6 @@ export default defineComponent({
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 50px;
   }
 </style>

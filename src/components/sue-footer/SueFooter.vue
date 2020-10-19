@@ -35,7 +35,10 @@ export default defineComponent({
 </script>
 <style>
 .sue-footer-container {
+  /*background-image: url("../../../public/imgs/banner/qingshan.jpg");*/
+  /*background-size:0px -1x;*/
   width: 100%;
+  height: 200px;
   padding: 20px;
   margin: 0 auto;
   background-color: white;

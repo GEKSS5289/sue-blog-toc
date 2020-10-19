@@ -21,7 +21,9 @@ export default defineComponent({
   padding: 20px;
   margin: 0 auto;
   background-color: white;
-  box-shadow: 1px 1px 12px #888888;
+
+  /*position: absolute;*/
+  z-index: 100;
 }
 
 .content-container {

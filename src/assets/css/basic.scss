@@ -1,5 +1,9 @@
 @import "mixin.scss";
+@import "theme";
 
+body{
+  background-color:white;
+}
 .text-s1 {
   color: #333333;
   font-weight: bold;
@@ -19,7 +23,7 @@
 }
 
 .text-s3:hover {
-  color: #ff6600;
+  color: $sue-theme-color;
 }
 .text-s4{
   color: #333333;

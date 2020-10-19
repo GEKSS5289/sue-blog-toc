@@ -6,7 +6,7 @@
       <router-link :to="'/problemlog'" tag="a" class="menu-item" >👩‍🚀踩艰</router-link>
       <router-link :to="'/filestorage'" tag="a" class="menu-item" >🍚贡献</router-link>
       <router-link :to="'/logs'" tag="a" class="menu-item">📄日志</router-link>
-      <div class="menu-item">☕佚名言</div>
+      <router-link :to="'/message'" class="menu-item">☕佚名言</router-link>
       <div class="menu-item">📜佚态集</div>
     </div>
   </div >
@@ -30,6 +30,7 @@
 
   @import "../../assets/css/mixin";
   @import "../../assets/css/basic";
+  @import "../../assets/css/theme";
   .blog-menu-detail{
     width: 350px;
     @include shadow();
@@ -70,7 +71,7 @@
         //@include shadowMenuItem()
         transition: all 0.7s;
         &:hover{
-          background-color: #ff6600;
+          background-color: $sue-theme-color;
           color: white;
         }
       }

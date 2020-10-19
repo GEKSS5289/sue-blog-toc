@@ -16,6 +16,7 @@
 
 <style lang="scss" scoped>
   @import "../../../assets/css/mixin.scss";
+  @import "../../../assets/css/theme";
   .comment-box{
     //@include shadow();
     display: flex;
@@ -27,7 +28,7 @@
     margin-bottom: 40px;
     transition: all 1s;
     color: #333333;
-    border-color:#ff6600;
+    border-color:$sue-theme-color;
     .time-shaft{
       /*background-color: #ff6600;*/
       width: 100px;

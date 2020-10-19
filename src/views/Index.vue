@@ -1,6 +1,6 @@
 <template>
   <blog-read-me :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}"></blog-read-me>
-  <div class="container">
+  <div class="container dynamic-area">
     <dynamic-list :class="{'blog-dynamic-begin':dynamicStatus,'blog-dynamic-end':!dynamicStatus}"></dynamic-list>
     <blog-service-list :class="{'blog-service-begin':serviceStatus,'blog-service-end':!serviceStatus}"></blog-service-list>
   </div>
@@ -42,10 +42,17 @@
 
   .container {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
-
-    @include marginTopAndBottom();
+    justify-content: space-between;
+    /*padding: 20px;*/
+    margin-bottom: 50px;
+    //@include marginTopAndBottom();
     //@include shadow();
+  }
+
+  .dynamic-area{
+    /*margin-top: 200px;*/
+    width:1300px;
+    padding: 100px;
+    background-color: white;
   }
 </style>

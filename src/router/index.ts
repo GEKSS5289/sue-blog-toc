@@ -34,6 +34,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path:'/logs',
         component: ()=>import('@/views/Logs.vue')
+      },
+      {
+        path:'/message',
+        component: ()=>import('@/views/MessageBoard.vue')
       }
     ],
   },

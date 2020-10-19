@@ -23,9 +23,11 @@
 <style lang="scss" scoped>
   @import "../../assets/css/basic";
   @import "../../assets/css/mixin";
+  @import "../../assets/css/theme";
 
 
   .blog-auther-detail{
+    @include shadow();
     box-sizing: border-box;
     transition: all 1s;
     width: 350px;
@@ -37,7 +39,7 @@
       margin-left: 20px;
 
       padding: 30px;
-      border-left:5px solid #ff6600;
+      border-left:5px solid $sue-theme-color;
     }
     p{
       text-align: left;
@@ -45,6 +47,6 @@
       padding:20px;
       line-height: 25px;
     };
-    @include shadow();
+
   }
 </style>
