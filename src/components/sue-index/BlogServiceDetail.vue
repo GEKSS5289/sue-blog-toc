@@ -2,19 +2,25 @@
   <div class="blog-auther-detail" :class="{'hidden':show}">
     <h1>自述</h1>
     <p class="blog-text-p">
-      擅长采茶
+      {{readme}}
     </p>
   </div >
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue'
+  import BLogRestfulApi from "@/utils/BLogRestfulApi";
 
   export default defineComponent({
     name: 'BlogServiceDetail',
     props:{
       show:{
         type:Boolean
+      }
+    },
+    setup(){
+      return{
+        readme:new BLogRestfulApi().getBlogReadme()
       }
     }
   })

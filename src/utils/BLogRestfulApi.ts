@@ -1,25 +1,39 @@
 import Dynamic from "../model/Dynamic";
 import axios from "axios";
 import {blogIndexApi} from "@/common/apirouter";
-import {reactive} from "vue";
+import {reactive ,ref, Ref} from "vue";
+import Readme from '@/model/Readme';
+
+
 
 /**
  * 请求后端主页Api
  */
 class BLogRestfulApi {
 
-  dynamiclists = reactive({
-    data: Array<Dynamic>()
+  indexData = reactive({
+    data:Array<Dynamic>(),
   })
 
+  readme:Ref<Readme | undefined> = ref<Readme|undefined>()
   getBlogDynamicList(): Array<Dynamic> {
+
     axios.get(blogIndexApi.dynamicApi).then(res => {
       for (let i = 0; i < res.data.data.length; i++) {
-        this.dynamiclists.data.push(res.data.data[i])
+        this.indexData.data.push(res.data.data[i])
       }
     })
-    return this.dynamiclists.data
+    return this.indexData.data
   }
+
+  getBlogReadme(){
+    axios.get(blogIndexApi.readmeApi).then(res => {
+        this.readme.value = res.data.data.content
+    })
+    return this.readme
+  }
+
+
 }
 
 
