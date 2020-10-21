@@ -109,7 +109,7 @@
     export default defineComponent({
         name: "ArticleCategory",
         setup(){
-          window.scrollTo(0,0);
+
 
           return{
             ...BlogInit(),

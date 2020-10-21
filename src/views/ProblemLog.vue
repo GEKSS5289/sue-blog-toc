@@ -39,7 +39,7 @@
   export default defineComponent({
     name: "ProblemLog",
     setup(){
-      window.scrollTo(0,0);
+
       return{
         ...BlogInit(),
       }

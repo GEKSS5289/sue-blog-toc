@@ -24,7 +24,6 @@ export default defineComponent({
       ArticleUserSay
     },
     setup(){
-       window.scrollTo(0,0);
 
       return{
         ...BlogInit(),

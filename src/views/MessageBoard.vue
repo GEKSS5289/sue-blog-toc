@@ -110,7 +110,7 @@
     export default defineComponent({
         name: "MessageBoard",
         setup(){
-          window.scrollTo(0,0);
+
           return{
             ...BlogInit(),
           }

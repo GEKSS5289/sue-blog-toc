@@ -65,7 +65,7 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px;
+  padding: 80px;
 }
 
 .footer-right {

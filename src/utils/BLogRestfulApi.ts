@@ -6,20 +6,20 @@ import {reactive} from "vue";
 /**
  * 请求后端主页Api
  */
-class BLogRestfulApi{
+class BLogRestfulApi {
 
-    dynamiclists = reactive({
-      data: Array<Dynamic>()
+  dynamiclists = reactive({
+    data: Array<Dynamic>()
+  })
+
+  getBlogDynamicList(): Array<Dynamic> {
+    axios.get(blogIndexApi.dynamicApi).then(res => {
+      for (let i = 0; i < res.data.data.length; i++) {
+        this.dynamiclists.data.push(res.data.data[i])
+      }
     })
-
-    getBlogDynamicList():Array<Dynamic>{
-        axios.get(blogIndexApi.dynamicApi).then(res => {
-            for (let i = 0; i < res.data.data.length; i++) {
-                this.dynamiclists.data.push(res.data.data[i])
-            }
-        })
-        return this.dynamiclists.data
-    }
+    return this.dynamiclists.data
+  }
 }
 
 

@@ -1,13 +1,15 @@
 @import "mixin.scss";
 @import "theme";
 
-body{
-  background-color:white;
+body {
+  background-color: white;
 }
+
 .text-s1 {
   color: #333333;
   font-weight: bold;
 }
+
 .text-s2 {
   color: #333333;
   font-size: 15px;
@@ -25,30 +27,36 @@ body{
 .text-s3:hover {
   color: $sue-theme-color;
 }
-.text-s4{
+
+.text-s4 {
   color: #333333;
   font-size: 16px;
   font-weight: bold;
   transition: all 0.3s;
   cursor: pointer;
 }
-.text-s4:hover{
+
+.text-s4:hover {
   color: #3683d6;
 }
-.readme-icon{
+
+.readme-icon {
   font-size: 60px;
 }
-.readme-title{
+
+.readme-title {
   margin-top: 20px;
-  font-family:Arial;
+  font-family: Arial;
   font-size: 30px;
   font-weight: bold;
   color: #5D6D7E;
 }
+
 * {
   padding: 0px;
   margin: 0px;
 }
+
 .mr20 {
   margin-right: 20px;
 }
@@ -56,12 +64,15 @@ body{
 .mr30 {
   margin-right: 30px;
 }
+
 .mr40 {
   margin-right: 40px;
 }
+
 .mr50 {
   margin-right: 50px;
 }
+
 .mr60 {
   margin-right: 60px;
 }
@@ -71,20 +82,20 @@ body{
 }
 
 
-
-.mt20{
+.mt20 {
   margin-top: 20px;
 }
+
 a {
   text-decoration: none;
 }
 
-.time-s{
+.time-s {
   background-color: #ff6600;
   padding: 10px;
 }
 
-.blog-text-p{
+.blog-text-p {
 
   font-size: 18px;
   font-weight: bold;
@@ -93,22 +104,24 @@ a {
 
 }
 
-.hidden{
+.hidden {
   height: 0;
   opacity: 0;
-  overflow:hidden;
+  overflow: hidden;
   //display: none;
 }
 
-.hidden-editor{
+.hidden-editor {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.hidden-hint{
+
+.hidden-hint {
   opacity: 0;
   color: white;
 }
+
 .blog-server-box {
   display: flex;
   flex-direction: column;
@@ -117,38 +130,37 @@ a {
 }
 
 
-
-.active{
+.active {
   background-color: #ff6600 !important;
 }
 
-.container{
+.container {
   width: 1226px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.blog-readme-begin{
+.blog-readme-begin {
   @include showbegin();
 }
 
-.blog-readme-end{
+.blog-readme-end {
   @include showEnd();
 }
 
-.blog-dynamic-begin{
+.blog-dynamic-begin {
   @include showbegin();
 }
 
-.blog-dynamic-end{
+.blog-dynamic-end {
   @include showEnd();
 }
 
-.blog-service-begin{
+.blog-service-begin {
   @include showbegin();
 }
 
-.blog-service-end{
+.blog-service-end {
   @include showEnd();
 }
 

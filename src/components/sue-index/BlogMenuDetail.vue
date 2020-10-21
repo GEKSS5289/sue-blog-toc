@@ -7,7 +7,7 @@
       <router-link :to="'/filestorage'" tag="a" class="menu-item" >🍚贡献</router-link>
       <router-link :to="'/logs'" tag="a" class="menu-item">📄日志</router-link>
       <router-link :to="'/message'" class="menu-item">☕佚名言</router-link>
-      <div class="menu-item">📜佚态集</div>
+      <router-link  :to="'/dynamic'" class="menu-item">📜佚态集</router-link >
     </div>
   </div >
 </template>

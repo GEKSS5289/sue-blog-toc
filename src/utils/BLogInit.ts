@@ -1,20 +1,22 @@
 import {ref} from "vue";
 
-export const BlogInit = ()=>{
+export const BlogInit = () => {
+
+  window.scrollTo(0,0);
   const readmeStatus = ref(true)
   const dynamicStatus = ref(true)
   const serviceStatus = ref(true)
 
-  setTimeout(()=>{
+  setTimeout(() => {
     readmeStatus.value = !readmeStatus.value
-  },200)
+  }, 200)
 
-  setTimeout(()=>{
+  setTimeout(() => {
     dynamicStatus.value = !dynamicStatus.value
     serviceStatus.value = !serviceStatus.value
-  },700)
+  }, 700)
 
-  return{
+  return {
     readmeStatus,
     dynamicStatus,
     serviceStatus
