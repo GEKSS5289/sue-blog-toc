@@ -55,7 +55,7 @@
       h1{
         font-size: 80px;
       }
-      margin-bottom: 100px;
+      margin-bottom: 60px;
     }
     .dynamic-list{
       /*padding: 100px;*/
@@ -74,6 +74,7 @@
           font-size: 25px;
           transition: all 1s;
           cursor: pointer;
+          display: inline-block;
           &:hover{
             color: #E74C3C;
           }
