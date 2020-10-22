@@ -30,32 +30,7 @@
     components:{
       BlogText,
     },
-    props:{
-      subfield: {
-        type:Boolean,
-        default:false
-      },
-      defaultOpen: {
-        type:String,
-        default:'preview'
-      },
-      editable: {
-        type:Boolean,
-        default:false
-      },
-      toolbarsFlag: {
-        type:Boolean,
-        default:false
-      },scrollStyle: {
-        type:Boolean,
-        default:true
-      },
-    },
     setup() {
-      const data = new BLogRestfulApi().getBlogDynamicList();
-      let da = computed(()=>{
-        return
-      })
       return {
         dynamiclists:new BLogRestfulApi().getBlogDynamicList(),
       }

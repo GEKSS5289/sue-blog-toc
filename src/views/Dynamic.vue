@@ -38,10 +38,10 @@
   .dynamic-banner{
     width: 1920px;
     height: 400px;
-    background-position: 0px -50px;
+    background-position: 0px 800px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url("../../public/imgs/banner/wuhan.jpg");
+    background-image: url("../../public/imgs/banner/lvxing.jpg");
   }
   .dynamic-container{
     /*background-color: red;*/
