@@ -1,4 +1,5 @@
 <template>
+  <div class="logs-banner" :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}"></div>
   <div class="container logs-container">
     <div class="logs-list">
       <div class="logs-item">
@@ -18,14 +19,29 @@
 </template>
 
 <script lang="ts">
-    import {defineComponent} from 'vue'
+  import {defineComponent} from 'vue'
+  import {BlogInit} from "@/utils/BLogInit";
 
-    export default defineComponent({
-        name: "Logs"
-    })
+  export default defineComponent({
+    name: "Logs",
+    setup(){
+
+      return{
+        ...BlogInit(),
+      }
+    }
+  })
 </script>
 
 <style lang="scss" scoped>
+  .logs-banner{
+    width: 1920px;
+    height: 400px;
+    background-position: -500px 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../../public/imgs/banner/chunri.jpg");
+  }
   .logs-container{
     display: flex;
     flex-direction: column;
