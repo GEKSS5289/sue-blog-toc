@@ -46,15 +46,16 @@
   @import "../../assets/css/mixin";
   @import "../../assets/css/basic";
   .dynamic-item {
-    position: relative;
-    background-color: white;
+
+
     &:hover {
       box-shadow: 1px 7px 12px #888888;
-      background-color: $sue-theme-color;
-      color: white;
+
+      color: #333333;
       .auther {
-        color:white;
-        border-right: 3px solid white;
+
+        color:$sue-theme-color;
+
       }
     }
     transition: all 0.7s;

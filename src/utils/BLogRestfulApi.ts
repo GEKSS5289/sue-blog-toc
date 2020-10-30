@@ -14,14 +14,17 @@ class BLogRestfulApi {
   indexData = reactive({
     data:Array<Dynamic>(),
   })
-
+  data = ref();
   readme:Ref<Readme | undefined> = ref<Readme|undefined>()
   getBlogDynamicList(): Array<Dynamic> {
 
     axios.get(blogIndexApi.dynamicApi).then(res => {
       for (let i = 0; i < res.data.data.length; i++) {
         this.indexData.data.push(res.data.data[i])
+
+
       }
+
     })
     return this.indexData.data
   }

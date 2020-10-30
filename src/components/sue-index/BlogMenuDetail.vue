@@ -59,7 +59,7 @@
       /*background-color: red;*/
 
       .menu-item{
-        text-decoration: none ;
+
         width: 80px;
         font-weight: bold;
         /*margin-left:10px;*/

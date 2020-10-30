@@ -28,10 +28,10 @@
       margin-left: auto;
       margin-right: auto;
       width: 1920px;
-      height: 600px;
+      height: 300px;
       /*position: relative;*/
       background-image: url("../../../public/imgs/banner/yuzhou.jpg");
-      background-position: 0 -100px ;
+      background-position: 0 -200px ;
       /*margin-bottom: 50px;*/
       display: flex;
       flex-direction: row;
@@ -42,7 +42,7 @@
 
         position: relative;
         color: white;
-        top: 250px;
+        top: 100px;
         left: 400px;
         flex-direction: column;
         h1{
