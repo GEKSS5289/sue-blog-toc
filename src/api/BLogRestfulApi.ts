@@ -21,8 +21,6 @@ class BLogRestfulApi {
     axios.get(blogIndexApi.dynamicApi).then(res => {
       for (let i = 0; i < res.data.data.length; i++) {
         this.indexData.data.push(res.data.data[i])
-
-
       }
 
     })

@@ -1,8 +1,9 @@
-const baseUrl = 'http://192.168.2.207:5288/';
+const baseUrl = 'http://192.168.2.207:5288/blog';
 
 const blogIndexApi = {
-  dynamicApi: baseUrl + "blog/dynamic",
-  readmeApi: baseUrl+"blog/readme"
+  dynamicApi: baseUrl + "/dynamic",
+  readmeApi: baseUrl+"/readme",
+  articleApi:baseUrl+"/article"
 }
 
 

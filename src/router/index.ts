@@ -17,12 +17,12 @@ const routes: Array<RouteRecordRaw> = [
         component: Index
       },
       {
-        path: '/article',
+        path: '/article/:id',
         component: Article,
       },
       {
         path: '/category',
-        component: ArticleCategory
+        component: ArticleCategory,
       },
       {
         path: '/problemlog',

@@ -9,7 +9,7 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import BLogRestfulApi from "@/utils/BLogRestfulApi";
+  import BLogRestfulApi from "@/api/BLogRestfulApi";
 
   export default defineComponent({
     name: 'BlogServiceDetail',

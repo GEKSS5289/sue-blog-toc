@@ -1,6 +1,7 @@
 <template>
-  <div class="container"  >
-    <ArticleTextarea></ArticleTextarea>
+  <div class="container">
+
+    <ArticleTextarea :articleId="articleId"></ArticleTextarea>
 <!--    <article-right></article-right>-->
     <article-user-say :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}"></article-user-say>
     <article-comment></article-comment>
@@ -8,13 +9,14 @@
 </template>
 
 <script>
-import { defineComponent,onMounted} from 'vue'
+import { defineComponent,ref} from 'vue'
 import ArticleTextarea from '@/components/sue-article/ArticleTextarea.vue'
 import ArticleRight from '@/components/sue-article/ArticleRight'
 import ArticleComment from '@/components/sue-article/ArticleComment'
 import ArticleUserSay from '@/components/sue-article/comment/ArticleUserSay'
 import { BlogInit } from '@/utils/BLogInit'
-
+import router from '@/router'
+import {useRoute} from 'vue-router'
 export default defineComponent({
     name:"Article",
     components:{
@@ -25,8 +27,13 @@ export default defineComponent({
     },
     setup(){
 
+      const router = useRoute()
+      const articleId = ref()
+      articleId.value = router.params.id
+
       return{
         ...BlogInit(),
+        articleId
       }
     }
 })

@@ -21,7 +21,7 @@
   import { defineComponent,onMounted,reactive,computed} from 'vue'
   import BlogText from "@/components/sue-index/BlogText.vue"
   import Dynamic from "@/model/Dynamic";
-  import BLogRestfulApi from "@/utils/BLogRestfulApi";
+  import BLogRestfulApi from "@/api/BLogRestfulApi";
   import 'mavon-editor/dist/css/index.css'
 
 

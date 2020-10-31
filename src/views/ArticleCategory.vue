@@ -56,45 +56,17 @@
         <div class="article-list">
 
 
-          <router-link class="none-style" :to="'/article'" tag="a" >
+          <router-link class="none-style" :to="`/article/${item.id}`" tag="a" v-for="(item,index) in articledesclist.data" :key="index">
             <div class="article-item">
-<!--              <div class="article-icon">📃</div>-->
               <div class="article-content">
-                <div class="article-info-title">JAV范德萨范德萨发撒的封建士大夫精神答案A实战</div>
-                <div class="article-category">JAVA</div>
-                <div class="article-comment-count">佚言:5</div>
-                <div class="article-read-count">随眼:5</div>
-                <div class="article-create-time">2020.6.7</div>
+                <div class="article-info-title">{{item.title}}</div>
+                <div class="article-category">{{item.categoryId}}</div>
+                <div class="article-comment-count">佚言:{{item.commentCount}}</div>
+                <div class="article-read-count">随眼:{{item.readCount}}</div>
+                <div class="article-create-time">发布时间:{{item.createdTime}}</div>
               </div>
             </div>
           </router-link>
-
-          <router-link class="none-style" to="/article" tag="a" >
-            <div class="article-item">
-              <!--              <div class="article-icon">📃</div>-->
-              <div class="article-content">
-                <div class="article-info-title">JAV范德萨范德萨发撒的封建士大夫精神答案A实战</div>
-                <div class="article-category">JAVA</div>
-                <div class="article-comment-count">佚言:5</div>
-                <div class="article-read-count">随眼:5</div>
-                <div class="article-create-time">2020.6.7</div>
-              </div>
-            </div>
-          </router-link>
-
-          <router-link class="none-style" to="/article" tag="a" >
-            <div class="article-item">
-              <!--              <div class="article-icon">📃</div>-->
-              <div class="article-content">
-                <div class="article-info-title">JAV范德萨范德萨发撒的封建士大夫精神答案A实战</div>
-                <div class="article-category">JAVA</div>
-                <div class="article-comment-count">佚言:5</div>
-                <div class="article-read-count">随眼:5</div>
-                <div class="article-create-time">2020.6.7</div>
-              </div>
-            </div>
-          </router-link>
-
         </div>
       </div>
     </div>
@@ -103,15 +75,26 @@
 </template>
 
 <script lang="ts">
-    import {defineComponent} from 'vue'
+    import {defineComponent, reactive} from 'vue'
     import {BlogInit} from "@/utils/BLogInit";
-
+    import axios from 'axios'
+    import {ArticleDesc} from "@/model/ArticleDesc";
+    import {blogIndexApi} from "@/common/apirouter";
     export default defineComponent({
         name: "ArticleCategory",
         setup(){
 
+          const articledesclist = reactive({
+            data:Array<ArticleDesc>(),
+          })
 
+          axios.get(blogIndexApi.articleApi).then(res=>{
+            for (let i = 0; i < res.data.data.length; i++) {
+              articledesclist.data.push(res.data.data[i])
+            }
+          })
           return{
+            articledesclist,
             ...BlogInit(),
           }
         }
@@ -261,7 +244,9 @@
             margin-left: 30px;
 
             .article-category{
-
+              display: flex;
+              align-items: center;
+              justify-content: center;
               margin-top: 10px;
               color: white;
               background-color: #273746;
