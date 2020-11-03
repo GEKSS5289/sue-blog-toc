@@ -4,11 +4,10 @@
     <div class="dynamic-list">
       <div v-for="(item,index) in dynamiclists" :key="index">
         <blog-text
-          :content="item.content"
+          :content="text"
           :mood="item.mood"
           :createdTime="item.createdTime">
         </blog-text>
-        <article class="context" v-html="compiledMarkdown"></article>
       </div>
     </div>
 
@@ -33,6 +32,7 @@
     setup() {
       return {
         dynamiclists:new BLogRestfulApi().getBlogDynamicList(),
+
       }
     }
 

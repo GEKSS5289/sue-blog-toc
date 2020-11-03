@@ -2,7 +2,7 @@
   <div class="container">
 
     <ArticleTextarea :articleId="articleId"></ArticleTextarea>
-<!--    <article-right></article-right>-->
+    <!--    <article-right></article-right>-->
     <article-user-say :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}"></article-user-say>
     <article-comment></article-comment>
   </div>
@@ -18,33 +18,31 @@ import { BlogInit } from '@/utils/BLogInit'
 import router from '@/router'
 import {useRoute} from 'vue-router'
 export default defineComponent({
-    name:"Article",
-    components:{
-      ArticleTextarea,
-      ArticleRight,
-      ArticleComment,
-      ArticleUserSay
-    },
-    setup(){
+  name:"Article",
+  components:{
+    ArticleTextarea,
+    ArticleRight,
+    ArticleComment,
+    ArticleUserSay
+  },
+  setup(){
 
-      const router = useRoute()
-      const articleId = ref()
-      articleId.value = router.params.id
+    const router = useRoute()
 
-      return{
-        ...BlogInit(),
-        articleId
-      }
+    return{
+      ...BlogInit(),
+      articleId:router.params.id
     }
+  }
 })
 
 </script>
 <style lang="scss" scoped>
-  .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-  }
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
 </style>
