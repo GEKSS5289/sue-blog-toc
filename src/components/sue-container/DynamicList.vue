@@ -4,7 +4,7 @@
     <div class="dynamic-list">
       <div v-for="(item,index) in dynamiclists" :key="index">
         <blog-text
-          :content="text"
+          :content="item.content"
           :mood="item.mood"
           :createdTime="item.createdTime">
         </blog-text>
