@@ -9,41 +9,9 @@
     </div>
     <div class="container article-category-container" :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}" >
       <div class="category-list">
-        <div class="category-item">
-          <h1>🥘</h1>
-          <h6>SpringBoot</h6>
-        </div>
-        <div class="category-item">
-          <h1>🥠</h1>
-          <h6>JAVA</h6>
-        </div>
-        <div class="category-item">
-          <h1>🥡</h1>
-          <h6>SpringCloud</h6>
-        </div>
-        <div class="category-item">
-          <h1>🍘</h1>
-          <h6>Redis</h6>
-        </div>
-        <div class="category-item">
-          <h1>🍨</h1>
-          <h6>Mysql</h6>
-        </div>
-        <div class="category-item">
-          <h1>🍹</h1>
-          <h6>RabbitMQ</h6>
-        </div>
-        <div class="category-item">
-          <h1>🍣</h1>
-          <h6>TypeScript</h6>
-        </div>
-        <div class="category-item">
-          <h1>🍗</h1>
-          <h6>JavaScript</h6>
-        </div>
-        <div class="category-item">
-          <h1>🥙</h1>
-          <h6>Nginx</h6>
+        <div class="category-item" v-for="(item,index) in categoryList.data" :key="index">
+          <h1>{{item.categoryImg}}</h1>
+          <h6>{{item.categoryName}}</h6>
         </div>
       </div>
 
@@ -56,7 +24,7 @@
         <div class="article-list">
 
 
-          <router-link class="none-style" :to="`/article/${item.id}`" tag="a" v-for="(item,index) in articledesclist.data" :key="index">
+          <router-link class="none-style" :to="`/article/${item.id}`" tag="a" v-for="(item,index) in articleDescList.data" :key="index">
             <div class="article-item">
               <div class="article-content">
                 <div class="article-info-title">{{item.title}}</div>
@@ -80,21 +48,34 @@
     import axios from 'axios'
     import {ArticleDesc} from "@/model/ArticleDesc";
     import {blogIndexApi} from "@/common/apirouter";
+    import { Category } from '@/model/Category';
     export default defineComponent({
         name: "ArticleCategory",
         setup(){
 
-          const articledesclist = reactive({
+          const articleDescList = reactive({
             data:Array<ArticleDesc>(),
+
+          })
+          const categoryList = reactive({
+            data:Array<Category>()
           })
 
           axios.get(blogIndexApi.articleApi).then(res=>{
             for (let i = 0; i < res.data.data.length; i++) {
-              articledesclist.data.push(res.data.data[i])
+              articleDescList.data.push(res.data.data[i])
             }
           })
+
+          axios.get(blogIndexApi.categoryApi).then(res=>{
+            for (let i = 0; i < res.data.data.length; i++) {
+              categoryList.data.push(res.data.data[i])
+            }
+          })
+
           return{
-            articledesclist,
+            articleDescList,
+            categoryList,
             ...BlogInit(),
           }
         }
