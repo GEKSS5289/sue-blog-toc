@@ -28,7 +28,7 @@
             <div class="article-item">
               <div class="article-content">
                 <div class="article-info-title">{{item.title}}</div>
-                <div class="article-category">{{item.categoryId}}</div>
+                <div class="article-category">{{item.categoryName}}</div>
                 <div class="article-comment-count">佚言:{{item.commentCount}}</div>
                 <div class="article-read-count">随眼:{{item.readCount}}</div>
                 <div class="article-create-time">发布时间:{{item.createdTime}}</div>
@@ -231,7 +231,8 @@
               margin-top: 10px;
               color: white;
               background-color: #273746;
-              width: 30px;
+              //width: 30px;
+              width: 100px;
               padding: 10px;
               margin-bottom: 10px;
             }

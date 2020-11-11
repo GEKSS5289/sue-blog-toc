@@ -69,6 +69,7 @@
     flex-direction: column;
     align-items: center;
     padding: 100px;
+    margin-bottom: 200px;
     h1{
       font-size: 100px;
       margin-bottom: 30px;

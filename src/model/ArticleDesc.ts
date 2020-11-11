@@ -4,5 +4,5 @@ export interface ArticleDesc {
   createdTime:Date
   commentCount:number
   readCount:number
-  categoryId:number
+  categoryName:string
 }

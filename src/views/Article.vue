@@ -44,5 +44,7 @@ export default defineComponent({
   justify-content: space-between;
   align-items: center;
   padding: 50px;
+  width: 1226px !important;
+  height: auto !important;
 }
 </style>

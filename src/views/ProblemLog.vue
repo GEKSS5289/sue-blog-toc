@@ -70,6 +70,7 @@
   }
 
   .problemlog-list{
+    margin-bottom: 100px;
     h1{
       font-size: 60px;
       font-weight: bold;

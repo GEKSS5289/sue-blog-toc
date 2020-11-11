@@ -63,9 +63,11 @@
     /*background-color: #FBFCFC;*/
     padding: 50px;
     border-radius: 15px;
-    width: 1200px;
+    //width: 1200px;
     margin-left: auto;
     margin-right: auto;
+
+
     h1{
       font-size: 60px;
     }
