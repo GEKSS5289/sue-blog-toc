@@ -4,7 +4,8 @@ const blogIndexApi = {
   dynamicApi: baseUrl + "/dynamic",
   readmeApi: baseUrl+"/readme",
   articleApi:baseUrl+"/article",
-  categoryApi:baseUrl+"/category"
+  categoryApi:baseUrl+"/category",
+  messageApi:baseUrl+"/message"
 }
 
 

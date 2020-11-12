@@ -54,6 +54,7 @@
       function sendMsg() {
         send.value = !send.value
         updateStatus()
+        showEditor.value = !showEditor.value
       }
 
       return{

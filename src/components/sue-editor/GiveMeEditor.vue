@@ -14,8 +14,10 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent,ref} from 'vue'
-
+  import { defineComponent,ref, Ref} from 'vue'
+  import axios from "axios";
+  import Message from "@/model/Message";
+  import {blogIndexApi} from "@/common/apirouter";
   export default defineComponent({
     props:{
       showEditor:{
@@ -24,24 +26,40 @@
     },
     name: 'GiveMeEditor',
     setup(prors,context){
-      const content = ref('');
+      const messageContent = ref('');
       const count = ref(0)
       const full = ref(false)
       const showTextarea = ref(false);
+
+
+
       function test() {
-        count.value = content.value.length
+        count.value = messageContent.value.length
         if(count.value == 320){
           full.value = true
         }else{
           full.value = false
         }
-        console.log(content)
+        console.log(messageContent)
       }
+
+
+
       function clickPush() {
+        let message:Message = {
+          content:messageContent.value
+        }
+        axios.post(blogIndexApi.messageApi,message).then(res=>{
+          console.log(res)
+        })
+        messageContent.value = ''
         context.emit("clickPush")
       }
+
+
+
       return{
-        content,
+        content: messageContent,
         clickPush,
         count,
         test,

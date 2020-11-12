@@ -7,112 +7,49 @@
         </div>
       </div>
       <div class="message-list " :class="{'blog-dynamic-begin':dynamicStatus,'blog-dynamic-end':!dynamicStatus}">
-        <div class="message-itme">
+        <div class="message-itme" v-for="(item,index) in message.msgData">
           <div class="message-user-info">
             <h1 class="message-user">山农</h1>
-            <h4 class="message-time">2020.10.10</h4>
+            <h4 class="message-time">{{item.createdTime}}</h4>
           </div>
           <div class="message-content">
             <p>
-              ）第三方渠道包括应用商店、网盟、SEM、手机预装、联合推广等渠道，
-              在这种方式中我们需要关注不同的渠道获取的用户
-              质量和数量如何？是否精准？ROI是多少？根据数据不断调整渠道的投入和组合，精细化获客。
+              {{item.content}}
             </p>
           </div>
         </div>
-        <div class="message-itme">
-          <div class="message-user-info">
-            <h1 class="message-user">山农</h1>
-            <h4 class="message-time">2020.10.10</h4>
-          </div>
-          <div class="message-content">
-            <p>
-              ）第三方渠道包括应用商店、网盟、SEM、手机预装、联合推广等渠道，
-              在这种方式中我们需要关注不同的渠道获取的用户
-              质量和数量如何？是否精准？ROI是多少？根据数据不断调整渠道的投入和组合，精细化获客。
-            </p>
-          </div>
-        </div>
-        <div class="message-itme">
-          <div class="message-user-info">
-            <h1 class="message-user">山农</h1>
-            <h4 class="message-time">2020.10.10</h4>
-          </div>
-          <div class="message-content">
-            <p>
-              ）第三方渠道包括应用商店、网盟、SEM、手机预装、联合推广等渠道，
-              在这种方式中我们需要关注不同的渠道获取的用户
-              质量和数量如何？是否精准？ROI是多少？根据数据不断调整渠道的投入和组合，精细化获客。
-            </p>
-          </div>
-        </div>
-        <div class="message-itme">
-          <div class="message-user-info">
-            <h1 class="message-user">山农</h1>
-            <h4 class="message-time">2020.10.10</h4>
-          </div>
-          <div class="message-content">
-            <p>
-              ）第三方渠道包括应用商店、网盟、SEM、手机预装、联合推广等渠道，
-              在这种方式中我们需要关注不同的渠道获取的用户
-              质量和数量如何？是否精准？ROI是多少？根据数据不断调整渠道的投入和组合，精细化获客。
-            </p>
-          </div>
-        </div>
-        <div class="message-itme">
-          <div class="message-user-info">
-            <h1 class="message-user">山农</h1>
-            <h4 class="message-time">2020.10.10</h4>
-          </div>
-          <div class="message-content">
-            <p>
-              ）第三方渠道包括应用商店、网盟、SEM、手机预装、联合推广等渠道，
-              在这种方式中我们需要关注不同的渠道获取的用户
-              质量和数量如何？是否精准？ROI是多少？根据数据不断调整渠道的投入和组合，精细化获客。
-            </p>
-          </div>
-        </div>
-        <div class="message-itme">
-          <div class="message-user-info">
-            <h1 class="message-user">山农</h1>
-            <h4 class="message-time">2020.10.10</h4>
-          </div>
-          <div class="message-content">
-            <p>
-              ）第三方渠道包括应用商店、网盟、SEM、手机预装、联合推广等渠道，
-              在这种方式中我们需要关注不同的渠道获取的用户
-              质量和数量如何？是否精准？ROI是多少？根据数据不断调整渠道的投入和组合，精细化获客。
-            </p>
-          </div>
-        </div>
-        <div class="message-itme">
-          <div class="message-user-info">
-            <h1 class="message-user">山农</h1>
-            <h4 class="message-time">2020.10.10</h4>
-          </div>
-          <div class="message-content">
-            <p>
-              ）第三方渠道包括应用商店、网盟、SEM、手机预装、联合推广等渠道，
-              在这种方式中我们需要关注不同的渠道获取的用户
-              质量和数量如何？是否精准？ROI是多少？根据数据不断调整渠道的投入和组合，精细化获客。
-            </p>
-          </div>
-        </div>
+
       </div>
 
     </div>
 </template>
 
 <script lang="ts">
-    import {defineComponent} from 'vue'
+    import {defineComponent,reactive} from 'vue'
     import {BlogInit} from "@/utils/BLogInit";
-
+    import axios from "axios";
+    import {blogIndexApi} from "@/common/apirouter";
+    import MessageModel from "@/model/MessageModel";
     export default defineComponent({
         name: "MessageBoard",
         setup(){
 
+          const message = reactive({
+            msgData:Array<MessageModel>()
+          })
+
+          axios.get(blogIndexApi.messageApi).then(res=>{
+            for (let i = 0; i < res.data.data.length; i++) {
+              message.msgData.push(res.data.data[i])
+            }
+            console.log(res)
+          })
+
+
+
           return{
             ...BlogInit(),
+            message
           }
         }
     })
@@ -154,6 +91,7 @@
       }
     }
     .message-list{
+      margin-bottom: 100px;
       padding: 30px;
       display: flex;
       flex-wrap: wrap;
