@@ -3,7 +3,7 @@
 
     <ArticleTextarea :articleId="articleId"></ArticleTextarea>
     <!--    <article-right></article-right>-->
-    <article-user-say :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}"></article-user-say>
+    <article-user-say :class="{'blog-readme-begin':readmeStatus,'blog-readme-end':!readmeStatus}" :article-id="articleId"></article-user-say>
     <article-comment></article-comment>
   </div>
 </template>

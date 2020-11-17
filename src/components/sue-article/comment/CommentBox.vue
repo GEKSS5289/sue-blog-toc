@@ -1,8 +1,8 @@
 <template>
   <div class="comment-box">
-    <div class="time-shaft">2020 12-10</div>
+    <div class="time-shaft">{{commentTime}}</div>
     <h1 class="comment-user">佚人</h1>
-    <div class="comment-content">我觉我们的设计只能够这样如此了</div>
+    <div class="comment-content">{{commentContent}}</div>
   </div>
 </template>
 
@@ -10,7 +10,17 @@
     import {defineComponent} from 'vue'
 
     export default defineComponent({
-        name: "CommentBox"
+        name: "CommentBox",
+        props:{
+          commentContent:{
+            type:String,
+            require:true
+          },
+          commentTime:{
+            type:Date,
+            require: true
+          }
+        }
     })
 </script>
 
@@ -31,10 +41,11 @@
     border-color:$sue-theme-color;
     .time-shaft{
       /*background-color: #ff6600;*/
-      width: 100px;
+      //width: 100px;
       height: 50px;
       position: absolute;
-      left: -100px;
+      display: flex;
+      left: -140px;
       color: #333333;
       text-align: center;
       font-weight: bold;

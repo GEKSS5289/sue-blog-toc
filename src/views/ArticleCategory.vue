@@ -49,6 +49,7 @@
     import {ArticleDesc} from "@/model/ArticleDesc";
     import {blogIndexApi} from "@/common/apirouter";
     import { Category } from '@/model/Category';
+    import {dataExtractor} from '@/utils/CommonUtils'
     export default defineComponent({
         name: "ArticleCategory",
         setup(){
@@ -62,15 +63,14 @@
           })
 
           axios.get(blogIndexApi.articleApi).then(res=>{
-            for (let i = 0; i < res.data.data.length; i++) {
-              articleDescList.data.push(res.data.data[i])
-            }
+            // for (let i = 0; i < res.data.data.length; i++) {
+            //   articleDescList.data.push(res.data.data[i])
+            // }
+            dataExtractor(articleDescList,res,res.data.data.length)
           })
 
           axios.get(blogIndexApi.categoryApi).then(res=>{
-            for (let i = 0; i < res.data.data.length; i++) {
-              categoryList.data.push(res.data.data[i])
-            }
+            dataExtractor(categoryList,res,res.data.data.length)
           })
 
           return{
