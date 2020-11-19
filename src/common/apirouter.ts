@@ -6,7 +6,7 @@ const blogIndexApi = {
   articleApi:baseUrl+"/article",
   categoryApi:baseUrl+"/category",
   messageApi:baseUrl+"/message",
-  commentApi:baseUrl+"/comment"
+  commentApi:baseUrl+"/article/comment"
 }
 
 
